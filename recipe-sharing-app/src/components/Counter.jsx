@@ -1,3 +1,4 @@
+import { Button } from '@mui/material'
 import React, { useState } from 'react'
 
 function Counter() {
@@ -6,7 +7,9 @@ function Counter() {
   return (
     <div>
         <p>The counter is in: {count}</p>
-        <button onClick={() => setCount(count + 1)}>Increment</button>
+        <Button variant="contained" color="primary" onClick={() => setCount(count + 1)}>
+            Increment
+        </Button>
     </div>
   )
 }
