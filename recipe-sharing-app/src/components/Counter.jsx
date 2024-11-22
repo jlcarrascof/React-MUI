@@ -10,6 +10,10 @@ function Counter() {
         <Button variant="contained" color="primary" onClick={() => setCount(count + 1)}>
             Increment
         </Button>
+        <br />
+        <Button variant="contained" color="secondary" onClick={() => setCount(count - 1)}>
+            Decrement
+        </Button>
     </div>
   )
 }
