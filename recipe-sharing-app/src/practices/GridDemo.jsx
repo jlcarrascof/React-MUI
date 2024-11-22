@@ -12,7 +12,9 @@ function GridDemo() {
           </Box>
         </Grid>
         <Grid item xs={6}>
-          <Box sx={{ backgroundColor: 'lightblue', height: '100px' }} />
+          <Box sx={{ backgroundColor: 'lightgreen', padding: '20px' }} >
+            Column 2
+          </Box>
         </Grid>
       </Grid>
     </div>
