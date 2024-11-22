@@ -1,8 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 function Counter() {
+  const [count, setCount] = useState(0)
+
   return (
-    <div>Counter</div>
+    <div>
+        <p>The counter is in: {count}</p>
+        
+    </div>
   )
 }
 
