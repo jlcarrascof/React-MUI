@@ -1,4 +1,5 @@
 import React from 'react'
+import { Box } from '@mui/material'
 
 function HomePage() {
 
@@ -9,9 +10,9 @@ function HomePage() {
     ]
 
     return (
-        <div>
+        <Box sx={{ padding: '20px' }}>
 
-        </div>
+        </Box>
     )
 }
 
