@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, CardContent, CardMedia, Typography } from '@mui/material'
+import { Card, CardContent, CardMedia, Typography, Button } from '@mui/material'
 
 function RecipeCard({ title, image }) {
   return (
@@ -15,6 +15,9 @@ function RecipeCard({ title, image }) {
             <Typography gutterBottom variant="h5" component="div">
                 {title}
             </Typography>
+            <Button size="small" color="primary">
+                See more
+            </Button>
         </CardContent>
     </Card>
   )
