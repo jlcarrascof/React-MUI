@@ -11,7 +11,9 @@ function HomePage() {
 
     return (
         <Box sx={{ padding: '20px' }}>
+            <Grid container spacing={3}>
 
+            </Grid>
         </Box>
     )
 }
