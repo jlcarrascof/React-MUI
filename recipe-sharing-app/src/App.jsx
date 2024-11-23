@@ -1,12 +1,15 @@
 import React from 'react'
-import Practices from './practices/Practices'
-// import Greeting from './components/Greeting'
-// import Counter from './components/Counter'
+import Header from './components/Header'
+import HomePage from './pages/HomePage'
+
 
 function App() {
 
   return (
-    <Practices />
+    <div>
+      <Header />
+      <HomePage />
+    </div>
   )
 }
 
