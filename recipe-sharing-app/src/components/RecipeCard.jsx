@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, CardContent } from '@mui/material'
+import { Card, CardContent, CardMedia, Typography } from '@mui/material'
 
 function RecipeCard({ title, image }) {
   return (
@@ -12,10 +12,11 @@ function RecipeCard({ title, image }) {
             sx={{ objectFit: 'cover' }}
         />
         <CardContent>
-
+            <Typography gutterBottom variant="h5" component="div">
+                {title}
+            </Typography>
         </CardContent>
     </Card>
-
   )
 }
 
