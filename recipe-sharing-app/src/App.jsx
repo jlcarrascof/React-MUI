@@ -6,8 +6,10 @@ import HomePage from './pages/HomePage'
 function App() {
 
   return (
-    <Header />
-    <HomePage />
+    <div>
+      <Header />
+      <HomePage />
+    </div>
   )
 }
 
