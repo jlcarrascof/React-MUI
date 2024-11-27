@@ -2,7 +2,10 @@ import React from 'react'
 
 function AddRecipePage() {
   return (
-    <div>AddRecipePage</div>
+    <div>
+      <h1>Add a New Recipe</h1>
+      <p>Here you can create new recipes to sharing with your friends</p>
+    </div>
   )
 }
 
