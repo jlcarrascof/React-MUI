@@ -10,7 +10,12 @@ function App() {
   return (
     <Router>
       <Header />
-      <HomePage />
+      <Routes>
+      <Route path='/' element={<HomePage />} />
+        <Route path='/add-recipe' element={<AddRecipePage />} />
+        <Route path='/recipe/:id' element={<RecipeDetailsPage />} />
+        <Route path='*' element={<h1>404 - Page not Found!</h1>} />
+      </Routes>
     </Router>
   )
 }
