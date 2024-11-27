@@ -11,8 +11,11 @@ const theme = createTheme({
             main: '#ff5722',
         },
     },
-
-
+    typography: {
+        fontFamily: 'Roboto, Arial, sans-serif',
+        h1: {},
+        h2: {},
+    },
 });
 
 export default theme;
