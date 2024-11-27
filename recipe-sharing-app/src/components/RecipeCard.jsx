@@ -1,5 +1,6 @@
+import { CardMedia, Card, CardContent, Typography, Button } from '@mui/material'
 import React from 'react'
-import { Card, CardContent, CardMedia, Typography, Button } from '@mui/material'
+import { Link } from 'react-router-dom'
 
 function RecipeCard({ title, image }) {
   return (
