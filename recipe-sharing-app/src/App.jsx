@@ -18,7 +18,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Router>
-        <Header />
+      <Header toggleDarkMode={() => setDarkMode(!darkMode)} darkMode={darkMode} />
         <Routes>
           <Route path='/' element={<HomePage />} />
           <Route path='/add-recipe' element={<AddRecipePage />} />
