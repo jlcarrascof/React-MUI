@@ -10,6 +10,7 @@ function App() {
 
   return (
     <ThemeProvider>
+      <CssBaseline />
       <Header />
       <HomePage />
     </ThemeProvider>
