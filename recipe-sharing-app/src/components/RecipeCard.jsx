@@ -14,11 +14,13 @@ function RecipeCard({ title, image }) {
         />
         <CardContent>
             <Typography gutterBottom variant="h5" component="div">
-                {title}
+                { title }
             </Typography>
-            <Button size="small" color="primary">
-                See more
-            </Button>
+            <Link to={`/recipe/${id}`} style={{ textDecoration: 'none' }}>
+              <Button size='small' color='primary'>
+                  See More...
+              </Button>
+            </Link>
         </CardContent>
     </Card>
   )
