@@ -2,7 +2,7 @@ import { CardMedia, Card, CardContent, Typography, Button } from '@mui/material'
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-function RecipeCard({ title, image }) {
+function RecipeCard({ id, title, image }) {
   return (
     <Card>
         <CardMedia
