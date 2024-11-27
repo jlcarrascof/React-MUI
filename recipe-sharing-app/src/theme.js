@@ -2,12 +2,12 @@ import { createTheme } from '@mui/material/styles'
 
 const theme = createTheme({
     palette: {
-      mode: 'light', // Comenzamos con el modo claro por defecto
+      mode: 'light', // Let's beging with the light mode by default.
       primary: {
-        main: '#4caf50', // Verde
+        main: '#4caf50', // Green
       },
       secondary: {
-        main: '#ff5722', // Naranja
+        main: '#ff5722', // Orange
       },
     },
     typography: {
