@@ -11,15 +11,17 @@ import RecipeDetailsPage from './pages/RecipeDetailsPage'
 function App() {
 
   return (
-    <Router>
-      <Header />
-      <Routes>
-        <Route path='/' element={<HomePage />} />
-        <Route path='/add-recipe' element={<AddRecipePage />} />
-        <Route path='/recipe/:id' element={<RecipeDetailsPage />} />
-        <Route path='*' element={<h1>404 - Page not Found!</h1>} />
-      </Routes>
-    </Router>
+    <ThemeProvider theme={theme}>
+      <Router>
+        <Header />
+        <Routes>
+          <Route path='/' element={<HomePage />} />
+          <Route path='/add-recipe' element={<AddRecipePage />} />
+          <Route path='/recipe/:id' element={<RecipeDetailsPage />} />
+          <Route path='*' element={<h1>404 - Page not Found!</h1>} />
+        </Routes>
+      </Router>
+    </ThemeProvider>
   )
 }
 
