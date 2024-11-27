@@ -10,6 +10,10 @@ import RecipeDetailsPage from './pages/RecipeDetailsPage'
 
 function App() {
 
+  const [darkMode, setDarkMode] = useState(false);
+
+  const theme = useMemo(() => getTheme(darkMode), [darkMode]);
+
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
