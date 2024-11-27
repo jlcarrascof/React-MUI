@@ -25,6 +25,9 @@ function Header() {
         <Link to='/add-recipe' style={{ textDecoration: 'none', color: 'white', marginRight: '20px' }}>
           Add Recipe
         </Link>
+        <Button color="inherit" onClick={toggleDarkMode}>
+          {darkMode ? 'Light Mode' : 'Dark Mode'}
+        </Button>
       </Toolbar>
     </AppBar>
   )
