@@ -3,7 +3,15 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 function Header() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(false)
+
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode)
+    document.documentElement.setAttribute(
+      'data-theme',
+      darkMode ? 'light' : 'dark'
+    )
+  }
 
   return (
     <AppBar position='static'>
