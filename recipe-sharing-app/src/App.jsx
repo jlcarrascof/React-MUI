@@ -8,10 +8,10 @@ import RecipeDetailsPage from './components/RecipeDetailsPage'
 function App() {
 
   return (
-    <div>
+    <Router>
       <Header />
       <HomePage />
-    </div>
+    </Router>
   )
 }
 
