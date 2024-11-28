@@ -5,21 +5,21 @@ const getTheme = (darkMode) =>
     palette: {
       mode: darkMode ? 'dark' : 'light',
       primary: {
-        main: '#4caf50', // Verde
+        main: '#4caf50', // Green
       },
       secondary: {
-        main: '#ff5722', // Naranja
+        main: '#ff5722', // Orange
       },
       background: {
-        default: darkMode ? '#121212' : '#f5f5f5', // Fondo dinámico
-        paper: darkMode ? '#1e1e1e' : '#ffffff',  // Componentes en modo oscuro
+        default: darkMode ? '#121212' : '#f5f5f5', // Dynamic background
+        paper: darkMode ? '#1e1e1e' : '#ffffff',  // Componentes in dark mode
       },
     },
     components: {
       MuiAppBar: {
         styleOverrides: {
           root: {
-            backgroundColor: darkMode ? '#333' : '#ff5722', // Dinámico
+            backgroundColor: darkMode ? '#333' : '#ff5722', // Dynamic
           },
         },
       },
