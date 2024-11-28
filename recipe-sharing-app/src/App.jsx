@@ -4,7 +4,7 @@ import HomePage from './pages/HomePage'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { ThemeProvider } from '@mui/material/styles'
 import CssBaseline from '@mui/material/CssBaseline'
-import getTheme from './theme'; // Nueva función para tema dinámico
+import getTheme from './theme'; // New function for a dynamic theme
 import AddRecipePage from './pages/AddRecipePage'
 import RecipeDetailsPage from './pages/RecipeDetailsPage'
 
