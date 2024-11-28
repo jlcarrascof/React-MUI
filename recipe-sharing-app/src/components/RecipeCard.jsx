@@ -1,7 +1,8 @@
+import { CardMedia, Card, CardContent, Typography, Button } from '@mui/material'
 import React from 'react'
-import { Card, CardContent, CardMedia, Typography, Button } from '@mui/material'
+import { Link } from 'react-router-dom'
 
-function RecipeCard({ title, image }) {
+function RecipeCard({ id, title, image }) {
   return (
     <Card>
         <CardMedia
@@ -13,11 +14,13 @@ function RecipeCard({ title, image }) {
         />
         <CardContent>
             <Typography gutterBottom variant="h5" component="div">
-                {title}
+                { title }
             </Typography>
-            <Button size="small" color="primary">
-                See more
-            </Button>
+            <Link to={`/recipe/${id}`} style={{ textDecoration: 'none' }}>
+              <Button size='small' color='primary'>
+                  See More...
+              </Button>
+            </Link>
         </CardContent>
     </Card>
   )
