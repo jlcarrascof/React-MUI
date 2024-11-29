@@ -11,6 +11,9 @@ function AddRecipePage() {
 
   return (
     <Box sx={{ maxWidth: 400, mx: 'auto', mt: 4 }} >
+      <Typography variant="h4" component="h1" sx={{ textAlign: 'center', mb: 3 }}>
+        Add a New Recipe
+      </Typography>
       <form onSubmit={handleSubmit(onSubmit)}>
         <TextField
           label="Recipe Title"
