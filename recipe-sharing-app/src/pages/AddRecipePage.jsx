@@ -11,7 +11,9 @@ function AddRecipePage() {
 
   return (
     <Box sx={{ maxWidth: 400, mx: 'auto', mt: 4 }} >
-
+      <form onSubmit={handleSubmit(onSubmit)}>
+        
+      </form>
     </Box>
   )
 }
