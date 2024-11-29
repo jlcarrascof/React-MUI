@@ -1,3 +1,4 @@
+import { Box } from '@mui/material'
 import React from 'react'
 import { useForm } from 'react-hook-form'
 
@@ -9,10 +10,9 @@ function AddRecipePage() {
   }
 
   return (
-    <div>
-      <h1>Add a New Recipe</h1>
-      <p>Here you can create new recipes to sharing with your friends</p>
-    </div>
+    <Box sx={{ maxWidth: 400, mx: 'auto', mt: 4 }} >
+
+    </Box>
   )
 }
 
