@@ -4,7 +4,7 @@ import { useForm } from 'react-hook-form'
 function AddRecipePage() {
 
   const { register, handleSubmit, formState: { errors } } = useForm()
-  const onSubmit = data => {
+  const onSubmit = (data) => {
     console.log(data) // Temporary: verify data
   }
 
