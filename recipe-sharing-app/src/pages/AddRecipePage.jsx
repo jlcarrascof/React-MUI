@@ -32,6 +32,9 @@ function AddRecipePage() {
           helperText={errors.description?.message}
           sx={{ mb: 2 }}
         />
+        <Button type="submit" variant="contained" color="primary" fullWidth>
+          Add Recipe
+        </Button>
       </form>
     </Box>
   )
