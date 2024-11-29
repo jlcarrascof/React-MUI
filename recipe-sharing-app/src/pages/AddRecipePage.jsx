@@ -21,6 +21,17 @@ function AddRecipePage() {
           helperText={errors.title?.message}
           sx={{ mb: 2 }}
         />
+        <TextField
+          label="Description"
+          variant="outlined"
+          fullWidth
+          multiline
+          rows={4}
+          {...register('description', { required: 'Description is required' })}
+          error={!!errors.description}
+          helperText={errors.description?.message}
+          sx={{ mb: 2 }}
+        />
       </form>
     </Box>
   )
