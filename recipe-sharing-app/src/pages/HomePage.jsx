@@ -6,6 +6,13 @@ function HomePage() {
 
     const [recipes, setRecipes] = React.useState([])
 
+    useEffect(() => {
+        fetch('http://localhost:5000/recipes')
+          .then((response) => response.json())
+          .then((data) => setRecipes(data))
+          .catch((error) => console.error('Error fetching recipes:', error))
+    }, [])
+
     return (
         <Box sx={{ padding: '20px' }}>
             <Grid container spacing={3}>
