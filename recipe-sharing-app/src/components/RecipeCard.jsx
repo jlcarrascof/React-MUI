@@ -2,7 +2,7 @@ import { CardMedia, Card, CardContent, Typography, Button } from '@mui/material'
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-function RecipeCard({ id, title, image }) {
+function RecipeCard({ id, title, description, image }) {
   return (
     <Card>
         <CardMedia
@@ -15,6 +15,9 @@ function RecipeCard({ id, title, image }) {
         <CardContent>
             <Typography gutterBottom variant="h5" component="div">
                 { title }
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
+                {description}
             </Typography>
             <Link to={`/recipe/${id}`} style={{ textDecoration: 'none' }}>
               <Button size='small' color='primary'>

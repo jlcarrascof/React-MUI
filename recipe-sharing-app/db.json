@@ -1,0 +1,7 @@
+{
+    "recipes": [
+        { "id": 1, "title": "Caesar Salad", "description": "Fresh and delicious", "image": "/images/cesar.png"},
+        { "id": 2, "title": "Tomato Soup", "description": "Healthy and flavorful", "image": "/images/tomato.png"},
+        { "id": 3, "title": "Margarita Pizza", "description": "Tasty and crispy", "image": "/images/pizza.png"}
+    ]
+}
