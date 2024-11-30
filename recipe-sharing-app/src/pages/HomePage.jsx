@@ -4,6 +4,8 @@ import RecipeCard from '../components/RecipeCard'
 
 function HomePage() {
 
+    const [recipes, setRecipes] = React.useState([])
+
     const recipes = [
         { id: 1, title: 'Caesar Salad', image: '/images/cesar.png' },
         { id: 2, title: 'Tomato Soup', image: '/images/tomato.png' },
