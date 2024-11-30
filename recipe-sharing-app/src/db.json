@@ -2,6 +2,6 @@
     "recipes": [
         { "id": 1, "title": "Caesar Salad", "description": "Fresh and delicious"},
         { "id": 2, "title": "Tomato Soup", "description": "Healthy and flavorful"},
-        { "id": 3, "title": "Caesar Salad", "description": "Fresh and delicious"}
+        { "id": 3, "title": "Margarita Pizza", "description": "Tasty and crispy"}
     ]
 }
