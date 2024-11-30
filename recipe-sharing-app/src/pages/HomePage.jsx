@@ -6,12 +6,6 @@ function HomePage() {
 
     const [recipes, setRecipes] = React.useState([])
 
-    const recipes = [
-        { id: 1, title: 'Caesar Salad', image: '/images/cesar.png' },
-        { id: 2, title: 'Tomato Soup', image: '/images/tomato.png' },
-        { id: 3, title: 'Margarita Pizza', image: '/images/pizza.png' },
-    ]
-
     return (
         <Box sx={{ padding: '20px' }}>
             <Grid container spacing={3}>
