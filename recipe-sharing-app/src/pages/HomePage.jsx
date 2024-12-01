@@ -16,7 +16,7 @@ function HomePage() {
           })
           .then((data) => setRecipes(data))
           .catch((error) => console.error('Error fetching recipes:', error))
-    }, [])
+    }, [page])
 
     return (
         <Box sx={{ padding: '20px' }}>
