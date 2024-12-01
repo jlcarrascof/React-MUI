@@ -35,10 +35,9 @@ function HomePage() {
             <Pagination
                 count={totalPages}
                 page={page}
-
+                onChange={(event, value) => setPage(value)}
+                sx={{ mt: 3 }}
             />
-
-
         </Box>
     )
 }
