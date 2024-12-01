@@ -14,7 +14,13 @@ function HomePage() {
 
             const totalCount = response.headers.get('X-Total-Count')
 
-            setTotalPages(Math.ceil(response.headers.get('X-Total-Count') / 2))
+            if (totalCount) {
+                setTotalPages(Math.ceil(totalCount / 2)); // Número total de páginas
+            } else {
+                console.warn('X-Total-Count header is missing');
+                setTotalPages(1); // Valor predeterminado
+            }
+
             return response.json()
           })
           .then((data) => setRecipes(data))
