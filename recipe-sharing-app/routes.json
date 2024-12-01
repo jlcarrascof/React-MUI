@@ -1,0 +1,3 @@
+{
+    "/recipes?_page=:page&_limit=:limit": "/recipes"
+}
