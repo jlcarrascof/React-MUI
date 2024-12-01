@@ -4,7 +4,9 @@ import RecipeCard from '../components/RecipeCard'
 
 function HomePage() {
 
-    const [recipes, setRecipes] = React.useState([])
+    const [recipes, setRecipes] = useState([])
+    const [page, setPage] = useState(1)
+    const [totalPages, setTotalPages] = useState(1)
 
     useEffect(() => {
         fetch('http://localhost:5000/recipes')
