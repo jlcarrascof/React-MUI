@@ -11,6 +11,9 @@ function HomePage() {
     useEffect(() => {
         fetch(`http://localhost:5000/recipes?_page=${page}&_limit=2`)
           .then((response) => {
+
+            const totalCount = response.headers.get('X-Total-Count')
+
             setTotalPages(Math.ceil(response.headers.get('X-Total-Count') / 2))
             return response.json()
           })
