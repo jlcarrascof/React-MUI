@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Box, Grid } from '@mui/material'
+import { Box, Grid, Pagination } from '@mui/material'
 import RecipeCard from '../components/RecipeCard'
 
 function HomePage() {
@@ -32,6 +32,13 @@ function HomePage() {
                     </Grid>
                 ))}
             </Grid>
+            <Pagination
+                count={totalPages}
+                page={page}
+
+            />
+
+
         </Box>
     )
 }
