@@ -9,7 +9,7 @@ function HomePage() {
     const [totalPages, setTotalPages] = useState(1)
 
     useEffect(() => {
-        fetch('http://localhost:5000/recipes')
+        fetch(`http://localhost:5000/recipes?_page=${page}&_limit=2`)
           .then((response) => response.json())
           .then((data) => setRecipes(data))
           .catch((error) => console.error('Error fetching recipes:', error))
