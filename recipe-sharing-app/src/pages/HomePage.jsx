@@ -10,7 +10,10 @@ function HomePage() {
 
     useEffect(() => {
         fetch(`http://localhost:5000/recipes?_page=${page}&_limit=2`)
-          .then((response) => response.json())
+          .then((response) => {
+            setTotalPages(Math.ceil(response.headers.get('X-Total-Count') / 2))
+            return response.json()
+          })
           .then((data) => setRecipes(data))
           .catch((error) => console.error('Error fetching recipes:', error))
     }, [])
