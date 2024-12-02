@@ -9,6 +9,9 @@ function HomePage() {
     const [totalPages, setTotalPages] = useState(1)
 
     useEffect(() => {
+
+        console.log("Current page:", page);
+
         async function fetchRecipes() {
             try {
                 const response = await fetch(`http://localhost:5000/recipes?_page=${page}&_limit=2`)
@@ -17,6 +20,7 @@ function HomePage() {
                 const totalCount = response.headers.get('X-Total-Count');
                 if (totalCount) {
                     setTotalPages(Math.ceil(totalCount / 2)) // Update total pages based on total count.
+                    console.log("Total pages:", Math.ceil(totalCount / 2)); // Verifica el número total de páginas
                 } else {
                     console.warn('X-Total-Count header is missing');
                     setTotalPages(1) // Default if no header.
@@ -24,6 +28,7 @@ function HomePage() {
 
                 const data = await response.json()
                 setRecipes(data) // Update recipes state.
+                console.log("Fetched recipes:", data); // Verifica los datos obtenidos
             } catch (error) {
                 console.error('Error fetching recipes:', error)
             }
@@ -49,7 +54,10 @@ function HomePage() {
             <Pagination
                 count={totalPages}
                 page={page}
-                onChange={(event, value) => setPage(value)} // Update page state on pagination change.
+                onChange={(event, value) => {
+                    console.log("Pagination clicked, new page:", value); // Verifica la nueva página seleccionada
+                    setPage(value); // Actualiza la página
+                }}
                 sx={{ mt: 3 }}
             />
         </Box>
