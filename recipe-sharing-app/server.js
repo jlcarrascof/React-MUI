@@ -16,4 +16,5 @@ app.get('/recipes', (req, res) => {
     const end = page * limit
 
     res.setHeader('X-Total-Count', recipes.length) // Add the header with the total of the recipes.
+    res.json(recipes.slice(start, end)); // Return the paginated recipes.
 });
