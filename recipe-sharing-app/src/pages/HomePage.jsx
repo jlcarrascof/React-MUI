@@ -9,23 +9,28 @@ function HomePage() {
     const [totalPages, setTotalPages] = useState(1)
 
     useEffect(() => {
-        fetch(`http://localhost:5000/recipes?_page=${page}&_limit=2`)
-          .then((response) => {
+        async function fetchRecipes() {
+            try {
+                const response = await fetch(`http://localhost:5000/recipes?_page=${page}&_limit=2`)
 
-            const totalCount = response.headers.get('X-Total-Count')
+                // Ensure the X-Total-Count header is present.
+                const totalCount = response.headers.get('X-Total-Count');
+                if (totalCount) {
+                    setTotalPages(Math.ceil(totalCount / 2)) // Update total pages based on total count.
+                } else {
+                    console.warn('X-Total-Count header is missing');
+                    setTotalPages(1) // Default if no header.
+                }
 
-            if (totalCount) {
-                setTotalPages(Math.ceil(totalCount / 2)); // Número total de páginas
-            } else {
-                console.warn('X-Total-Count header is missing');
-                setTotalPages(1); // Valor predeterminado
+                const data = await response.json()
+                setRecipes(data) // Update recipes state.
+            } catch (error) {
+                console.error('Error fetching recipes:', error)
             }
+        }
 
-            return response.json()
-          })
-          .then((data) => setRecipes(data))
-          .catch((error) => console.error('Error fetching recipes:', error))
-    }, [page])
+        fetchRecipes()
+    }, [page]) // Trigger fetch when `page` changes.
 
     return (
         <Box sx={{ padding: '20px' }}>
