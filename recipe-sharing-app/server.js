@@ -1,6 +1,6 @@
-const express = require('express')
-const cors = require('cors')
-const recipes = require('./db.json').recipes // Import recipes from db.json
+import express from 'express'
+import cors from 'cors'
+import { recipes } from './db.json' assert { type: 'json' } // Import JSON with assert
 
 const app = express()
 const PORT = 5000
