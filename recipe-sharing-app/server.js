@@ -2,7 +2,7 @@ import express from 'express'
 import cors from 'cors'
 import fs from 'fs'
 
-const data = JSON.parse(fs.readFileSync('./db.json', 'utf-8')) // Carga JSON
+const data = JSON.parse(fs.readFileSync('./db.json', 'utf-8')) // Load JSON
 const recipes = data.recipes
 
 const app = express()
