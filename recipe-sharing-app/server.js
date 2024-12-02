@@ -18,3 +18,8 @@ app.get('/recipes', (req, res) => {
     res.setHeader('X-Total-Count', recipes.length) // Add the header with the total of the recipes.
     res.json(recipes.slice(start, end)) // Return the paginated recipes.
 })
+
+// Start the server
+app.listen(PORT, () => {
+    console.log(`Server running on http://localhost:${PORT}`)
+})
