@@ -11,7 +11,7 @@ const PORT = 5000
 // Middleware
 app.use(cors(
     {
-        exposedHeaders: ['X-Total-Count'], // Permite que el frontend lea este encabezado
+        exposedHeaders: ['X-Total-Count'], // Let the frontend reads this header.
     }
 )) // Let access from React
 app.use(express.json())
@@ -21,8 +21,6 @@ app.get('/recipes', (req, res) => {
     const limit = parseInt(req.query._limit) || 2
     const start = (page - 1) * limit
     const end = page * limit
-
-    console.log(`Request for page ${page} with limit ${limit}`); // Log para verificar petición
 
     res.setHeader('X-Total-Count', recipes.length) // Add the header with the total of the recipes.
     res.json(recipes.slice(start, end)) // Return the paginated recipes.
