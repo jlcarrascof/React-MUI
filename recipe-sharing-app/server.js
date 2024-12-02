@@ -1,6 +1,9 @@
 import express from 'express'
 import cors from 'cors'
-import { recipes } from './db.json' assert { type: 'json' } // Import JSON with assert
+import fs from 'fs'
+
+const data = JSON.parse(fs.readFileSync('./db.json', 'utf-8')) // Carga JSON
+const recipes = data.recipes
 
 const app = express()
 const PORT = 5000
