@@ -49,7 +49,7 @@ function HomePage() {
             <Pagination
                 count={totalPages}
                 page={page}
-                onChange={(event, value) => setPage(value)}
+                onChange={(event, value) => setPage(value)} // Update page state on pagination change.
                 sx={{ mt: 3 }}
             />
         </Box>
